@@ -1,0 +1,14 @@
+D:\Project\ASP.NET Core\SmartBin.Api\SmartBin.Infrastructure\bin\Debug\net8.0\SmartBin.Infrastructure.deps.json
+D:\Project\ASP.NET Core\SmartBin.Api\SmartBin.Infrastructure\bin\Debug\net8.0\SmartBin.Infrastructure.runtimeconfig.json
+D:\Project\ASP.NET Core\SmartBin.Api\SmartBin.Infrastructure\bin\Debug\net8.0\SmartBin.Infrastructure.dll
+D:\Project\ASP.NET Core\SmartBin.Api\SmartBin.Infrastructure\bin\Debug\net8.0\SmartBin.Infrastructure.pdb
+D:\Project\ASP.NET Core\SmartBin.Api\SmartBin.Infrastructure\obj\Debug\net8.0\SmartBin.Infrastructure.csproj.AssemblyReference.cache
+D:\Project\ASP.NET Core\SmartBin.Api\SmartBin.Infrastructure\obj\Debug\net8.0\SmartBin.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Project\ASP.NET Core\SmartBin.Api\SmartBin.Infrastructure\obj\Debug\net8.0\SmartBin.Infrastructure.AssemblyInfoInputs.cache
+D:\Project\ASP.NET Core\SmartBin.Api\SmartBin.Infrastructure\obj\Debug\net8.0\SmartBin.Infrastructure.AssemblyInfo.cs
+D:\Project\ASP.NET Core\SmartBin.Api\SmartBin.Infrastructure\obj\Debug\net8.0\SmartBin.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Project\ASP.NET Core\SmartBin.Api\SmartBin.Infrastructure\obj\Debug\net8.0\SmartBin.Infrastructure.dll
+D:\Project\ASP.NET Core\SmartBin.Api\SmartBin.Infrastructure\obj\Debug\net8.0\refint\SmartBin.Infrastructure.dll
+D:\Project\ASP.NET Core\SmartBin.Api\SmartBin.Infrastructure\obj\Debug\net8.0\SmartBin.Infrastructure.pdb
+D:\Project\ASP.NET Core\SmartBin.Api\SmartBin.Infrastructure\obj\Debug\net8.0\SmartBin.Infrastructure.genruntimeconfig.cache
+D:\Project\ASP.NET Core\SmartBin.Api\SmartBin.Infrastructure\obj\Debug\net8.0\ref\SmartBin.Infrastructure.dll
