@@ -139,3 +139,6 @@ D:\Project\ASP.NET Core\SmartBin.Api\SmartBin.Api\bin\Debug\net8.0\SmartBin.Infr
 D:\Project\ASP.NET Core\SmartBin.Api\SmartBin.Api\obj\Debug\net8.0\SmartBin.Api.csproj.AssemblyReference.cache
 D:\Project\ASP.NET Core\SmartBin.Api\SmartBin.Api\obj\Debug\net8.0\SmartBin.Api.MvcApplicationPartsAssemblyInfo.cs
 D:\Project\ASP.NET Core\SmartBin.Api\SmartBin.Api\obj\Debug\net8.0\SmartBin.B1419AE9.Up2Date
+D:\Project\ASP.NET Core\SmartBin.Api\SmartBin.Api\obj\Debug\net8.0\SmartBin.Api.sourcelink.json
+D:\Project\ASP.NET Core\SmartBin.Api\SmartBin.Api\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Project\ASP.NET Core\SmartBin.Api\SmartBin.Api\bin\Debug\net8.0\Microsoft.Bcl.TimeProvider.dll

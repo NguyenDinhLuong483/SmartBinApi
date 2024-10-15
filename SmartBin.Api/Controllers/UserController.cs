@@ -1,4 +1,7 @@
 ﻿
+using Newtonsoft.Json.Linq;
+using SmartBin.Infrastructure.Domain.Models.Person;
+
 namespace SmartBin.Api.Controllers
 {
     [Route("[controller]")]
@@ -32,6 +35,7 @@ namespace SmartBin.Api.Controllers
             return await _userService.GetUserByUserName(userName);
         }
         [HttpPost]
+        [AllowAnonymous]
         [Route("RegisterNewUser")]
         public async Task<IActionResult> RegisterNewUser([FromBody] CreateNewUserViewModel createNew)
         {
@@ -72,6 +76,14 @@ namespace SmartBin.Api.Controllers
         {
             var result = await _userService.ChangePassword(Id, changePassword);
             return new OkObjectResult(result);
+        }
+        [HttpPost]
+        [AllowAnonymous]
+        [Route("Login")]
+        public async Task<IActionResult> Login([FromBody] LoginViewModel login)
+        {
+            var token = await _userService.Login(login);
+            return new OkObjectResult(token);
         }
     }
 }

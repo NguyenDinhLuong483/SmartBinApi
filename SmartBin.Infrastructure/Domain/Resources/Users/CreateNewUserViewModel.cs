@@ -21,11 +21,11 @@ namespace SmartBin.Infrastructure.Domain.Resources.Users
         [DataMember]
         public string Sex { get; set; }
         [DataMember]
-        public DateTime Birthday { get; set; } = DateTime.MinValue.Date;
+        public DateTime Birthday { get; set; } 
         [DataMember]
         public string HomeTown { get; set; }
         [DataMember]
-        public DateTime IssuanceDate { get; set; } = DateTime.MinValue.Date;
+        public DateTime IssuanceDate { get; set; } 
         [DataMember]
         [JsonIgnore]
         public string Role {  get; set; }

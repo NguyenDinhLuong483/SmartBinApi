@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "D:\\Project\\ASP.NET Core\\SmartBin.Api\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{CE8D6A9F-5FBC-4AFF-96C9-ACFF2351BEC1}|SmartBin.Api\\SmartBin.Api.csproj|d:\\project\\asp.net core\\smartbin.api\\smartbin.api\\hubs\\scadahost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE8D6A9F-5FBC-4AFF-96C9-ACFF2351BEC1}|SmartBin.Api\\SmartBin.Api.csproj|solutionrelative:smartbin.api\\hubs\\scadahost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE8D6A9F-5FBC-4AFF-96C9-ACFF2351BEC1}|SmartBin.Api\\SmartBin.Api.csproj|d:\\project\\asp.net core\\smartbin.api\\smartbin.api\\hubs\\notificationhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE8D6A9F-5FBC-4AFF-96C9-ACFF2351BEC1}|SmartBin.Api\\SmartBin.Api.csproj|solutionrelative:smartbin.api\\hubs\\notificationhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E47FDD8F-7333-4D09-99D5-7A9FC9816459}|SmartBin.Host\\SmartBin.Host.csproj|d:\\project\\asp.net core\\smartbin.api\\smartbin.host\\hosting\\hostworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E47FDD8F-7333-4D09-99D5-7A9FC9816459}|SmartBin.Host\\SmartBin.Host.csproj|solutionrelative:smartbin.host\\hosting\\hostworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CE8D6A9F-5FBC-4AFF-96C9-ACFF2351BEC1}|SmartBin.Api\\SmartBin.Api.csproj|d:\\project\\asp.net core\\smartbin.api\\smartbin.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CE8D6A9F-5FBC-4AFF-96C9-ACFF2351BEC1}|SmartBin.Api\\SmartBin.Api.csproj|solutionrelative:smartbin.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -14,20 +26,33 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Project\\ASP.NET Core\\SmartBin.Api\\SmartBin.Api\\Program.cs",
               "RelativeDocumentMoniker": "SmartBin.Api\\Program.cs",
               "ToolTip": "D:\\Project\\ASP.NET Core\\SmartBin.Api\\SmartBin.Api\\Program.cs",
               "RelativeToolTip": "SmartBin.Api\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAvAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEYAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-04T04:38:27.185Z",
               "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HostWorker.cs",
+              "DocumentMoniker": "D:\\Project\\ASP.NET Core\\SmartBin.Api\\SmartBin.Host\\Hosting\\HostWorker.cs",
+              "RelativeDocumentMoniker": "SmartBin.Host\\Hosting\\HostWorker.cs",
+              "ToolTip": "D:\\Project\\ASP.NET Core\\SmartBin.Api\\SmartBin.Host\\Hosting\\HostWorker.cs",
+              "RelativeToolTip": "SmartBin.Host\\Hosting\\HostWorker.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-15T16:45:19.155Z",
               "EditorCaption": ""
             },
             {
@@ -37,6 +62,32 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NotificationHub.cs",
+              "DocumentMoniker": "D:\\Project\\ASP.NET Core\\SmartBin.Api\\SmartBin.Api\\Hubs\\NotificationHub.cs",
+              "RelativeDocumentMoniker": "SmartBin.Api\\Hubs\\NotificationHub.cs",
+              "ToolTip": "D:\\Project\\ASP.NET Core\\SmartBin.Api\\SmartBin.Api\\Hubs\\NotificationHub.cs",
+              "RelativeToolTip": "SmartBin.Api\\Hubs\\NotificationHub.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-15T14:44:24.81Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ScadaHost.cs",
+              "DocumentMoniker": "D:\\Project\\ASP.NET Core\\SmartBin.Api\\SmartBin.Api\\Hubs\\ScadaHost.cs",
+              "RelativeDocumentMoniker": "SmartBin.Api\\Hubs\\ScadaHost.cs",
+              "ToolTip": "D:\\Project\\ASP.NET Core\\SmartBin.Api\\SmartBin.Api\\Hubs\\ScadaHost.cs",
+              "RelativeToolTip": "SmartBin.Api\\Hubs\\ScadaHost.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEoAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-15T06:44:54.895Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -10,6 +10,6 @@ namespace SmartBin.Infrastructure.Services.Users
         public Task<bool> DeleteUserById(string UserId);
         public Task <bool> UpdateUserInfo(string userId, UpdateUserInfoViewModel updateViewModel);
         public Task<string> ChangePassword(string Id, PasswordChangeViewModel viewModel);
-        
+        public Task<string> Login(LoginViewModel loginViewModel);
     }
 }

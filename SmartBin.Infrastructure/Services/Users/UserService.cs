@@ -6,12 +6,13 @@ namespace SmartBin.Infrastructure.Services.Users
         public IUserRepository _userRepository { get; set; }
         public IUnitOfWork _unitOfWork {  get; set; }
         public IMapper _mapper { get; set; }
-
-        public UserService(IUserRepository userRepository, IUnitOfWork unitOfWork, IMapper mapper)
+        private readonly JwtSetting _jwtSetting;
+public UserService(IUserRepository userRepository, IUnitOfWork unitOfWork, IMapper mapper, IOptions<JwtSetting> jwtSetting)
         {
             _userRepository = userRepository;
             _unitOfWork = unitOfWork;
             _mapper = mapper;
+            _jwtSetting = jwtSetting.Value;
         }
 
         public async Task<List<UserViewModel>> GetAllUsers()
@@ -138,6 +139,29 @@ namespace SmartBin.Infrastructure.Services.Users
             {
                 return "Not found user with this Id";
             }
+        }
+
+        public async Task<string> Login(LoginViewModel loginViewModel)
+        {
+            var user = await _userRepository.LoginAsync(loginViewModel);
+
+            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtSetting.Key));
+            var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
+
+            var myClaims = new[]
+            {
+                new Claim(ClaimTypes.SerialNumber, user.Id),
+                new Claim(ClaimTypes.Name, user.Name),
+                new Claim(ClaimTypes.Role, user.Role),
+            };
+
+            var token = new JwtSecurityToken(
+                claims: myClaims, 
+                expires: DateTime.UtcNow.AddMinutes(30), 
+                signingCredentials: credentials
+            );
+
+            return new JwtSecurityTokenHandler().WriteToken(token);
         }
     }
 }

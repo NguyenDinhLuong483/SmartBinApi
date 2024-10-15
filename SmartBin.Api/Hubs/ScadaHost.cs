@@ -1,6 +1,4 @@
 ﻿
-using Newtonsoft.Json;
-
 namespace SmartBin.Api.Hubs
 {
     public class ScadaHost : BackgroundService
@@ -25,7 +23,7 @@ namespace SmartBin.Api.Hubs
         {
             _mqttClient.MessageReceived += OnMqttClientMessageReceived;
             await _mqttClient.ConnectAsync();
-            await _mqttClient.Subscribe("SAWACO/+");
+            await _mqttClient.Subscribe("SMART_BIN/+/+");
         }
         private async Task OnMqttClientMessageReceived(MqttMessage arg)
         {
@@ -35,21 +33,47 @@ namespace SmartBin.Api.Hubs
             {
                 return;
             }
-            //string[] splitTopic = topic.Split('/');
-            //string Id = splitTopic[1];
-            //var metrics = JsonConvert.DeserializeObject<List<TagChangedNotification>>(payloadMessage);
-            //if (metrics is null)
-            //{
-            //    return;
-            //}
 
-            //foreach (var metric in metrics)
-            //{
-            //    _buffer.Update(metric);
-            //    var json = JsonConvert.SerializeObject(metric);
-            //    await _notificationHub.Clients.All.SendAsync("GetAll", json);
-            //    Console.WriteLine(json);
-            //}
+            string[] splitTopic = topic.Split('/');
+            string binId = splitTopic[1];
+            string binUnitId = "";
+            switch (splitTopic[2])
+            {
+                case "Status":
+                    binUnitId = "";
+                    break;
+                case "Organic":
+                    binUnitId = binId + "OR";
+                    break;
+                case "RecyclableInorganic":
+                    binUnitId = binId + "RI";
+                    break;
+                case "NonRecyclableInorganic":
+                    binUnitId = binId + "NI";
+                    break;
+            }
+
+            var metrics = JsonConvert.DeserializeObject<List<TagChangedNotification>>(payloadMessage);
+            if (metrics is null)
+            {
+                return;
+            }
+
+            foreach (var metric in metrics)
+            {
+                metric.BinId = binId;
+                metric.BinUnitId = binUnitId;
+                _buffer.Update(metric);
+                var json = JsonConvert.SerializeObject(metric);
+
+                if(metric.Name == "FullLevel")
+                {
+                    await _notificationHub.Clients.Group("Users").SendAsync("ReceiceForUser", json);
+                }
+                await _notificationHub.Clients.Group("BinAdmins").SendAsync("ReceiceForAdmin", json);
+
+                Console.WriteLine(json);
+            }
         }
     }
 }

@@ -14,7 +14,7 @@ namespace SmartBin.Infrastructure.Repositories.Users
 
         public async Task<User> GetUserByIdAsync(string UserId)
         {
-            var user = await _context.Users.FirstOrDefaultAsync(x => x.Id == UserId);
+            var user = await _context.Users.FirstOrDefaultAsync(x => x.Id == UserId && x.Role == "User");
             return user != null ? user : throw new ResourceNotfoundException("Not found user!");
         }
 
@@ -58,6 +58,12 @@ namespace SmartBin.Infrastructure.Repositories.Users
         {
             _context.Update(user);
             await _context.SaveChangesAsync();
+        }
+
+        public async Task<User> LoginAsync(LoginViewModel user)
+        {
+            var currentUser = await _context.Users.FirstOrDefaultAsync(x => x.UserName ==  user.UserName && x.Password == user.Password);
+            return currentUser != null ? currentUser : throw new ResourceNotfoundException("UserName or Password is incorrect!");
         }
     }
 }

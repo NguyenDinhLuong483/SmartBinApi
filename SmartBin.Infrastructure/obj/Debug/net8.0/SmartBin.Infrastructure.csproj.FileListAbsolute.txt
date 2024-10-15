@@ -12,3 +12,4 @@ D:\Project\ASP.NET Core\SmartBin.Api\SmartBin.Infrastructure\obj\Debug\net8.0\re
 D:\Project\ASP.NET Core\SmartBin.Api\SmartBin.Infrastructure\obj\Debug\net8.0\SmartBin.Infrastructure.pdb
 D:\Project\ASP.NET Core\SmartBin.Api\SmartBin.Infrastructure\obj\Debug\net8.0\SmartBin.Infrastructure.genruntimeconfig.cache
 D:\Project\ASP.NET Core\SmartBin.Api\SmartBin.Infrastructure\obj\Debug\net8.0\ref\SmartBin.Infrastructure.dll
+D:\Project\ASP.NET Core\SmartBin.Api\SmartBin.Infrastructure\obj\Debug\net8.0\SmartBin.Infrastructure.sourcelink.json
