@@ -1,15 +1,12 @@
 ﻿
+using System;
+
 namespace SmartBin.Host.Hosting
 {
     public class HostWorker : BackgroundService
     {
         public ManagedMqttClient _mqttClient;
         public IServiceScopeFactory _serviceScopeFactory;
-        public double Lon, Lat;
-        public DateTime TimeStamp;
-        public bool Stolen;
-        public string Bluetooth = "", Temp = "";
-        public int Battery;
 
         public HostWorker(ManagedMqttClient mqttClient, IServiceScopeFactory serviceScopeFactory)
         {
@@ -26,68 +23,63 @@ namespace SmartBin.Host.Hosting
         {
             _mqttClient.MessageReceived += OnMqttClientMessageReceived;
             await _mqttClient.ConnectAsync();
-            await _mqttClient.Subscribe("SAWACO/+");
+            await _mqttClient.Subscribe("SMART_BIN/+/+");
         }
         private async Task OnMqttClientMessageReceived(MqttMessage arg)
         {
             var topic = arg.Topic;
             var payloadMessage = arg.Payload;
-
             if (topic is null || payloadMessage is null)
             {
                 return;
             }
 
             string[] splitTopic = topic.Split('/');
-            string Id = splitTopic[1];
+            string binId = splitTopic[1];
+            string binUnitId = "";
+            switch (splitTopic[2])
+            {
+                case "Status":
+                    binUnitId = "";
+                    break;
+                case "Organic":
+                    binUnitId = binId + "OR";
+                    break;
+                case "RecyclableInorganic":
+                    binUnitId = binId + "RI";
+                    break;
+                case "NonRecyclableInorganic":
+                    binUnitId = binId + "NI";
+                    break;
+            }
+
             var metrics = JsonConvert.DeserializeObject<List<TagChangedNotification>>(payloadMessage);
             if (metrics is null)
             {
                 return;
             }
-            Lon = Lat = 0;
-            Stolen = false;
             foreach (var metric in metrics)
             {
-                //logic metric
+                metric.BinId = binId;
+                metric.BinUnitId = binUnitId;
+
+                if (metric.Name == "LastCollection")
+                {
+                    using (IServiceScope scope = _serviceScopeFactory.CreateScope())
+                    {
+                        var binUnitService = scope.ServiceProvider.GetRequiredService<IBinUnitService>();
+                        await binUnitService.AddCollectedHistory(new AddCollectedHistoryViewModel(binUnitId, metric.Timestamp));
+                    }
+                }
+                else if (metric.Name == "EngineError" && metric.Value.ToString() == "True")
+                {
+                    using (IServiceScope scope = _serviceScopeFactory.CreateScope())
+                    {
+                        var binUnitService = scope.ServiceProvider.GetRequiredService<IBinUnitService>();
+                        await binUnitService.AddErrorHistory(new AddErrorHistoryViewModel(binUnitId, metric.Name, metric.Timestamp));
+                    }
+                }
             }
-
-            using (IServiceScope scope = _serviceScopeFactory.CreateScope())
-            {
-                //var stolenLineService = scope.ServiceProvider.GetRequiredService<IStolenLineService>();
-                //var loggerService = scope.ServiceProvider.GetRequiredService<ILoggerService>();
-
-                //var isexist = await loggerService.GetLoggerById(Id);
-                //if (Stolen && Lat != 0 && Lon != 0)
-                //{
-                //    await loggerService.UpdateLoggerStatus(new UpdateLoggerViewModel(Lon, Lat, isexist.Name, Battery, Temp, true, "ON", TimeStamp), Id);
-                //    await stolenLineService.AddNewStolenLine(new AddStolenLineViewModel(Id, Lon, Lat, Battery, TimeStamp));
-                //}
-                //else if (!Stolen && Lat != 0 && Lon != 0)
-                //{
-                //    try
-                //    {
-                //        await loggerService.UpdateLoggerStatus(new UpdateLoggerViewModel(Lon, Lat, isexist.Name, Battery, Temp, false, "ON", TimeStamp), Id);
-                //    }
-                //    catch
-                //    {
-                //        await loggerService.CreateNewLogger(new AddLoggerViewModel(Id, Lon, Lat, Id));
-                //    }
-                //}
-                //else
-                //{
-                //    await loggerService.UpdateLoggerStatus(new UpdateLoggerViewModel(isexist.Longtitude, isexist.Latitude, isexist.Name, Battery, Temp, isexist.Stolen, Bluetooth, TimeStamp), Id);
-                //}
-            }
-        }
-        private double ParseDouble(object value)
-        {
-            return double.TryParse(value?.ToString(), out double result) ? result : 0;
-        }
-
-        private bool ParseBool(object value)
-        {
-            return bool.TryParse(value?.ToString(), out bool result) ? result : false;
         }
     }
 }

@@ -31,12 +31,6 @@ namespace SmartBin.Api.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<double>("Battery")
-                        .HasColumnType("float");
-
-                    b.Property<bool>("IsConnected")
-                        .HasColumnType("bit");
-
                     b.Property<double>("Latitude")
                         .HasColumnType("float");
 
@@ -56,20 +50,6 @@ namespace SmartBin.Api.Migrations
                     b.Property<string>("BinId")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("EngineError")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("FullLevel")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("IsConnected")
-                        .HasColumnType("bit");
-
-                    b.Property<DateTime>("LastCollected")
-                        .HasColumnType("datetime2");
 
                     b.Property<int>("Type")
                         .HasColumnType("int");
@@ -101,6 +81,32 @@ namespace SmartBin.Api.Migrations
                     b.HasIndex("BinUnitId");
 
                     b.ToTable("CollectedHistories");
+                });
+
+            modelBuilder.Entity("SmartBin.Infrastructure.Domain.Models.Histories.ErrorHistory", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("BinUnitId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("ErrorName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("TimeStamp")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BinUnitId");
+
+                    b.ToTable("ErrorHistories");
                 });
 
             modelBuilder.Entity("SmartBin.Infrastructure.Domain.Models.Histories.LoginHistory", b =>
@@ -225,6 +231,17 @@ namespace SmartBin.Api.Migrations
                     b.Navigation("BinUnit");
                 });
 
+            modelBuilder.Entity("SmartBin.Infrastructure.Domain.Models.Histories.ErrorHistory", b =>
+                {
+                    b.HasOne("SmartBin.Infrastructure.Domain.Models.Bin.BinUnit", "BinUnit")
+                        .WithMany("ErrorHistories")
+                        .HasForeignKey("BinUnitId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("BinUnit");
+                });
+
             modelBuilder.Entity("SmartBin.Infrastructure.Domain.Models.Histories.LoginHistory", b =>
                 {
                     b.HasOne("SmartBin.Infrastructure.Domain.Models.Person.User", "User")
@@ -255,6 +272,8 @@ namespace SmartBin.Api.Migrations
             modelBuilder.Entity("SmartBin.Infrastructure.Domain.Models.Bin.BinUnit", b =>
                 {
                     b.Navigation("CollectedHistories");
+
+                    b.Navigation("ErrorHistories");
                 });
 
             modelBuilder.Entity("SmartBin.Infrastructure.Domain.Models.Person.User", b =>

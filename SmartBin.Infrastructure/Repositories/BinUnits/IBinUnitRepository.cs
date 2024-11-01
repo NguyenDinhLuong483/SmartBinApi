@@ -5,7 +5,7 @@ namespace SmartBin.Infrastructure.Repositories.BinUnits
     {
         public Task<BinUnit> GetBinUnitByIdAsync(string id);
         public Task<bool> IsExistBinUnit(string id);
-        public Task UpdateBinUnitAsync(BinUnit binUnit);
         public Task AddCollectedHistoryAsync(CollectedHistory history); 
+        public Task AddErrorHistoryAsync(ErrorHistory history);
     }
 }

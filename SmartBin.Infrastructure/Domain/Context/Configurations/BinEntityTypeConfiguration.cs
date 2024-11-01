@@ -10,8 +10,6 @@ namespace SmartBin.Infrastructure.Domain.Context.Configurations
             builder.Property(x => x.Longtitude);
             builder.Property(x => x.Latitude);
             builder.Property(x => x.Address);
-            builder.Property(x => x.Battery);
-            builder.Property(x => x.IsConnected);
 
             builder.HasMany(x => x.BinUnits).WithOne(x => x.Bin).HasForeignKey(x => x.BinId).OnDelete(DeleteBehavior.Cascade);
         }

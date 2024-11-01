@@ -11,7 +11,6 @@ namespace SmartBin.Infrastructure.Domain.Mapping
             CreateMap<Bin, BinViewModel>();
             CreateMap<Bin, BinForUserViewModel>();
             CreateMap<BinUnit, BinUnitViewModel>();
-            CreateMap<BinUnit, BinUnitForUserViewModel>();
             CreateMap<CollectedHistory, CollectedHistoryViewModel>();
         }
     }

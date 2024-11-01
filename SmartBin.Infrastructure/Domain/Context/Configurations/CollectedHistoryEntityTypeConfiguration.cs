@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace SmartBin.Infrastructure.Domain.Context.Configurations
 {
     public class CollectedHistoryEntityTypeConfiguration : IEntityTypeConfiguration<CollectedHistory>

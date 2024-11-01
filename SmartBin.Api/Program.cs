@@ -1,7 +1,4 @@
 
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.IdentityModel.Tokens;
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -18,7 +15,7 @@ builder.Services.AddCors(options =>
         builder =>
         {
             builder
-            .WithOrigins("localhost", "https://sawacofinal-4.vercel.app", "http://localhost:3003", "http://localhost:3004", "http://localhost:3005", "http://localhost:3006", "http://localhost:3007", "http://localhost:3008", "http://localhost:3009", "http://localhost:3010")
+            .WithOrigins("localhost", "http://localhost:3003", "http://localhost:3004", "http://localhost:3005", "http://localhost:3006", "http://localhost:3007", "http://localhost:3008", "http://localhost:3009", "http://localhost:3010")
             .AllowAnyMethod()
             .AllowAnyHeader()
             .AllowCredentials();

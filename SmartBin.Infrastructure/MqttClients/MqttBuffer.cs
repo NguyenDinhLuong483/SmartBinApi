@@ -3,26 +3,29 @@ namespace SmartBin.Infrastructure.MqttClients
 {
     public class MqttBuffer
     {
-        public List<TagChangedNotification> TagChanged { get; set; } = new();
-        private readonly ManagedMqttClient _mqttClient;
-
-        public MqttBuffer(ManagedMqttClient mqttClient)
+        public List<TagChangedNotification> TagChangedForUser { get; set; } = new();
+        public List<TagChangedNotification> TagChangedForAdmin { get; set; } = new();
+        public MqttBuffer()
         {
-            _mqttClient = mqttClient;
         }
 
         public void Update(TagChangedNotification tagChangedNotification)
         {
-            var isExist = TagChanged.FirstOrDefault(x => x.Name == tagChangedNotification.Name);
+            var isExist = TagChangedForAdmin.FirstOrDefault(x => x.Name == tagChangedNotification.Name);
             if (isExist is null)
             {
-                TagChanged.Add(tagChangedNotification);
+                TagChangedForAdmin.Add(tagChangedNotification);
+                if(tagChangedNotification.Name == "FullLevel")
+                {
+                    TagChangedForUser.Add(tagChangedNotification);
+                }
             }
             else
             {
                 isExist.Value = tagChangedNotification.Value;
             }
         }
-        public string GetAllTags() => System.Text.Json.JsonSerializer.Serialize(TagChanged);
+        public string GetTagsForUser() => System.Text.Json.JsonSerializer.Serialize(TagChangedForUser);
+        public string GetTagsForAdmin() => System.Text.Json.JsonSerializer.Serialize(TagChangedForAdmin);
     }
 }

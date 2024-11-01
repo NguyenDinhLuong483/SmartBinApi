@@ -10,6 +10,7 @@ namespace SmartBin.Infrastructure.Domain.Mapping
             CreateMap<AddNewBinViewModel, Bin>();
             CreateMap<CreateNewBinUnitViewModel, BinUnit>();
             CreateMap<AddCollectedHistoryViewModel, CollectedHistory>();
+            CreateMap<AddErrorHistoryViewModel, ErrorHistory>();
             CreateMap<RegisterUserAdminViewModel, User>();
             CreateMap<RegisterWorkerAdminViewModel, User>();
             CreateMap<RegisterBinAdminViewModel, User>();

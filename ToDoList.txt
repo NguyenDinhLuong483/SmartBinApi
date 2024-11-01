@@ -1,0 +1,4 @@
+Công việc: 1/11/2024
++ chỉnh lại Bin, BinUnit(xóa các thuộc tính không cần thiết)
++ chỉnh lại buffer(cho User và Admin)
++ Viết hostworker

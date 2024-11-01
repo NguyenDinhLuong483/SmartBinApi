@@ -1,5 +1,4 @@
 ﻿
-
 namespace SmartBin.Infrastructure.Repositories.BinUnits
 {
     public class BinUnitRepository : BaseRepository, IBinUnitRepository
@@ -10,7 +9,12 @@ namespace SmartBin.Infrastructure.Repositories.BinUnits
 
         public async Task AddCollectedHistoryAsync(CollectedHistory history)
         {
-            await _context.AddAsync(history);
+            await _context.CollectedHistories.AddAsync(history);
+        }
+
+        public async Task AddErrorHistoryAsync(ErrorHistory history)
+        {
+            await _context.ErrorHistories.AddAsync(history);
         }
 
         public async Task<BinUnit> GetBinUnitByIdAsync(string id)
@@ -22,12 +26,6 @@ namespace SmartBin.Infrastructure.Repositories.BinUnits
         public async Task<bool> IsExistBinUnit(string id)
         {
             return await _context.BinUnits.AnyAsync(x => x.BinUnitId == id);
-        }
-
-        public Task UpdateBinUnitAsync(BinUnit binUnit)
-        {
-            _context.BinUnits.Update(binUnit);
-            return _context.SaveChangesAsync();
         }
     }
 }

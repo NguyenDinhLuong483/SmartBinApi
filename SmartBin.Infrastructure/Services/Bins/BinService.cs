@@ -1,5 +1,4 @@
 ﻿
-
 namespace SmartBin.Infrastructure.Services.Bins
 {
     public class BinService : IBinService
@@ -85,14 +84,6 @@ namespace SmartBin.Infrastructure.Services.Bins
                 if (!string.IsNullOrEmpty(viewModel.Address))
                 {
                     bin.Address = viewModel.Address;
-                }
-                if (!string.IsNullOrEmpty(viewModel.Battery.ToString()))
-                {
-                    bin.Battery = viewModel.Battery;
-                }
-                if (bin.IsConnected != viewModel.IsConnected) 
-                {
-                    bin.IsConnected = viewModel.IsConnected;
                 }
                 await _binRepository.UpdateBinAsync(bin);
                 return await _unitOfWork.CompleteAsync();

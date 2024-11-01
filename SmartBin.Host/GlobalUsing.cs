@@ -35,3 +35,4 @@ global using Microsoft.Extensions.Hosting;
 global using Newtonsoft.Json;
 global using Microsoft.Extensions.Configuration;
 global using SmartBin.Host.Hosting;
+

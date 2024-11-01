@@ -39,3 +39,4 @@ global using SmartBin.Infrastructure.Domain.Resources.Admins;
 global using SmartBin.Infrastructure.Services.Admins;
 global using SmartBin.Infrastructure.Repositories.Admins;
 global using SmartBin.Infrastructure.MqttClients;
+global using Microsoft.AspNetCore.Authentication.JwtBearer;

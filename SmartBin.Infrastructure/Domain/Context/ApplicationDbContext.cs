@@ -13,6 +13,7 @@ namespace SmartBin.Infrastructure.Domain.Context
         public DbSet<CollectedHistory> CollectedHistories { get; set; }
         public DbSet<LoginHistory> LoginHistories { get; set; }
         public DbSet<PointChangedHistory> PointChangedHistories { get; set; }
+        public DbSet<ErrorHistory> ErrorHistories {  get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -22,6 +23,7 @@ namespace SmartBin.Infrastructure.Domain.Context
             modelBuilder.ApplyConfiguration(new CollectedHistoryEntityTypeConfiguration());
             modelBuilder.ApplyConfiguration(new LoginHistoryEntityTypeConfiguration());
             modelBuilder.ApplyConfiguration(new PointChangedHistoryEntityTypeConfiguration());
+            modelBuilder.ApplyConfiguration(new ErrorHistoryEntityTypeConfiguration());
         }
     }
 }
