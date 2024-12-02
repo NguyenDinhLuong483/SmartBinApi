@@ -15,7 +15,7 @@ builder.Services.AddCors(options =>
         builder =>
         {
             builder
-            .WithOrigins("localhost", "http://localhost:3003", "http://localhost:3004", "http://localhost:3005", "http://localhost:3006", "http://localhost:3007", "http://localhost:3008", "http://localhost:3009", "http://localhost:3010")
+            .WithOrigins("localhost", "http://localhost:3003", "http://localhost:3002", "http://localhost:3001", "http://localhost:3000", "http://localhost:3007", "http://localhost:3008", "http://localhost:3009", "http://localhost:3010")
             .AllowAnyMethod()
             .AllowAnyHeader()
             .AllowCredentials();
@@ -42,6 +42,7 @@ builder.Services.AddScoped<IBinUnitService, BinUnitService>();
 builder.Services.AddScoped<IBinUnitRepository, BinUnitRepository>();
 builder.Services.AddScoped<IAdminService, AdminService>();
 builder.Services.AddScoped<IAdminRepository, AdminRepository>();
+builder.Services.AddScoped<IOptimizeRouteService, OptimizeRouteService>();
 
 builder.Services.AddAutoMapper(typeof(ModelToViewModelProfile));
 builder.Services.AddAutoMapper(typeof(ViewModelToModelProfile));

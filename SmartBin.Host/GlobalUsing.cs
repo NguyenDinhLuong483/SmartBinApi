@@ -35,4 +35,5 @@ global using Microsoft.Extensions.Hosting;
 global using Newtonsoft.Json;
 global using Microsoft.Extensions.Configuration;
 global using SmartBin.Host.Hosting;
-
+global using SmartBin.Infrastructure.Services.Routes;
+global using SmartBin.Infrastructure.Domain.Resources.FindRoute;

@@ -12,8 +12,8 @@ using SmartBin.Infrastructure.Domain.Context;
 namespace SmartBin.Api.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241101064134_UpdateError")]
-    partial class UpdateError
+    [Migration("20241102025212_Init")]
+    partial class Init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

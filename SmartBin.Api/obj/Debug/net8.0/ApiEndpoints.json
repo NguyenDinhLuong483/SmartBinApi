@@ -108,9 +108,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "SmartBin.Api.Controllers.BinController",
+    "ContainingType": "SmartBin.Api.Controllers.BinsController",
     "Method": "CreateNewBin",
-    "RelativePath": "Bin/CreateNewBin",
+    "RelativePath": "Bins/CreateNewBin",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -124,9 +124,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "SmartBin.Api.Controllers.BinController",
+    "ContainingType": "SmartBin.Api.Controllers.BinsController",
     "Method": "DeleteBinById",
-    "RelativePath": "Bin/DeleteBinById",
+    "RelativePath": "Bins/DeleteBinById",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -140,9 +140,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "SmartBin.Api.Controllers.BinController",
+    "ContainingType": "SmartBin.Api.Controllers.BinsController",
     "Method": "GetAllBins",
-    "RelativePath": "Bin/GetAllBins",
+    "RelativePath": "Bins/GetAllBins",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -160,9 +160,9 @@
     ]
   },
   {
-    "ContainingType": "SmartBin.Api.Controllers.BinController",
+    "ContainingType": "SmartBin.Api.Controllers.BinsController",
     "Method": "GetBinById",
-    "RelativePath": "Bin/GetBinById",
+    "RelativePath": "Bins/GetBinById",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -186,9 +186,9 @@
     ]
   },
   {
-    "ContainingType": "SmartBin.Api.Controllers.BinController",
+    "ContainingType": "SmartBin.Api.Controllers.BinsController",
     "Method": "GetBinsForUser",
-    "RelativePath": "Bin/GetBinsForUser",
+    "RelativePath": "Bins/GetBinsForUser",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -206,9 +206,9 @@
     ]
   },
   {
-    "ContainingType": "SmartBin.Api.Controllers.BinController",
+    "ContainingType": "SmartBin.Api.Controllers.BinsController",
     "Method": "UpdateBinById",
-    "RelativePath": "Bin/UpdateBinById",
+    "RelativePath": "Bins/UpdateBinById",
     "HttpMethod": "PATCH",
     "IsController": true,
     "Order": 0,
@@ -251,6 +251,22 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "SmartBin.Api.Controllers.OptimizeRouteController",
+    "Method": "FindBestRoute",
+    "RelativePath": "OptimizeRoute/FindBestRoute",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "SmartBin.Api.Controllers.OptimizeRouteRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "SmartBin.Api.Controllers.PointChangeController",

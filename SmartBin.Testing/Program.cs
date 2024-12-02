@@ -8,7 +8,7 @@ class Program
     {
         var options = new MqttClientOptionsBuilder()
                             .WithClientId(string.Empty)
-                            .WithTcpServer("20.11.21.225", 1883)
+                            .WithTcpServer("20.39.193.159", 1883)
                             .WithTimeout(TimeSpan.FromSeconds(30))
                             .WithKeepAlivePeriod(TimeSpan.FromSeconds(60))
                             .Build();

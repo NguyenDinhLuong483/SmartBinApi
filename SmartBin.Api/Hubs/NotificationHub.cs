@@ -42,5 +42,15 @@ namespace SmartBin.Api.Hubs
 
             await base.OnDisconnectedAsync(exception);
         }
+        public async Task GetBufferForUser()
+        {
+            var tag = _buffer.GetTagsForUser();
+            await Clients.Group("Users").SendAsync("TagForUser",tag);
+        }
+        public async Task GetBufferForAdmin()
+        {
+            var tag = _buffer.GetTagsForAdmin();
+            await Clients.Group("BinAdmins").SendAsync("TagForAdmin", tag);
+        }
     }
 }

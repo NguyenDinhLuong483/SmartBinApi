@@ -3,11 +3,11 @@ namespace SmartBin.Api.Controllers
 {
     [Route("[controller]")]
     [ApiController]
-    public class BinController : ControllerBase
+    public class BinsController : ControllerBase
     {
         public IBinService _binService { get; set; }
 
-        public BinController(IBinService binService)
+        public BinsController(IBinService binService)
         {
             _binService = binService;
         }
@@ -45,7 +45,7 @@ namespace SmartBin.Api.Controllers
             {
                 return new OkObjectResult("Create new bin successfully!");
             }
-            else 
+            else
             {
                 return new OkObjectResult("This bin id already exist!");
             }

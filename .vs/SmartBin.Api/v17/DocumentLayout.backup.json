@@ -3,40 +3,16 @@
   "WorkspaceRootPath": "C:\\My Folder\\Projects\\SmartBinApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CE8D6A9F-5FBC-4AFF-96C9-ACFF2351BEC1}|SmartBin.Api\\SmartBin.Api.csproj|c:\\my folder\\projects\\smartbinapi\\smartbin.api\\controllers\\bincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CE8D6A9F-5FBC-4AFF-96C9-ACFF2351BEC1}|SmartBin.Api\\SmartBin.Api.csproj|solutionrelative:smartbin.api\\controllers\\bincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DCB295B2-5AE4-4E95-A1D9-2FCBFDB6014F}|SmartBin.Infrastructure\\SmartBin.Infrastructure.csproj|c:\\my folder\\projects\\smartbinapi\\smartbin.infrastructure\\domain\\resources\\collectedhistories\\addcollectedhistoryviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DCB295B2-5AE4-4E95-A1D9-2FCBFDB6014F}|SmartBin.Infrastructure\\SmartBin.Infrastructure.csproj|solutionrelative:smartbin.infrastructure\\domain\\resources\\collectedhistories\\addcollectedhistoryviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E47FDD8F-7333-4D09-99D5-7A9FC9816459}|SmartBin.Host\\SmartBin.Host.csproj|c:\\my folder\\projects\\smartbinapi\\smartbin.host\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E47FDD8F-7333-4D09-99D5-7A9FC9816459}|SmartBin.Host\\SmartBin.Host.csproj|solutionrelative:smartbin.host\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E47FDD8F-7333-4D09-99D5-7A9FC9816459}|SmartBin.Host\\SmartBin.Host.csproj|c:\\my folder\\projects\\smartbinapi\\smartbin.host\\hosting\\hostworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E47FDD8F-7333-4D09-99D5-7A9FC9816459}|SmartBin.Host\\SmartBin.Host.csproj|solutionrelative:smartbin.host\\hosting\\hostworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DCB295B2-5AE4-4E95-A1D9-2FCBFDB6014F}|SmartBin.Infrastructure\\SmartBin.Infrastructure.csproj|c:\\my folder\\projects\\smartbinapi\\smartbin.infrastructure\\services\\binunits\\binunitservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DCB295B2-5AE4-4E95-A1D9-2FCBFDB6014F}|SmartBin.Infrastructure\\SmartBin.Infrastructure.csproj|solutionrelative:smartbin.infrastructure\\services\\binunits\\binunitservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DCB295B2-5AE4-4E95-A1D9-2FCBFDB6014F}|SmartBin.Infrastructure\\SmartBin.Infrastructure.csproj|c:\\my folder\\projects\\smartbinapi\\smartbin.infrastructure\\repositories\\binunits\\binunitrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DCB295B2-5AE4-4E95-A1D9-2FCBFDB6014F}|SmartBin.Infrastructure\\SmartBin.Infrastructure.csproj|solutionrelative:smartbin.infrastructure\\repositories\\binunits\\binunitrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DCB295B2-5AE4-4E95-A1D9-2FCBFDB6014F}|SmartBin.Infrastructure\\SmartBin.Infrastructure.csproj|c:\\my folder\\projects\\smartbinapi\\smartbin.infrastructure\\repositories\\binunits\\ibinunitrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DCB295B2-5AE4-4E95-A1D9-2FCBFDB6014F}|SmartBin.Infrastructure\\SmartBin.Infrastructure.csproj|solutionrelative:smartbin.infrastructure\\repositories\\binunits\\ibinunitrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DCB295B2-5AE4-4E95-A1D9-2FCBFDB6014F}|SmartBin.Infrastructure\\SmartBin.Infrastructure.csproj|c:\\my folder\\projects\\smartbinapi\\smartbin.infrastructure\\services\\binunits\\ibinunitservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DCB295B2-5AE4-4E95-A1D9-2FCBFDB6014F}|SmartBin.Infrastructure\\SmartBin.Infrastructure.csproj|solutionrelative:smartbin.infrastructure\\services\\binunits\\ibinunitservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DCB295B2-5AE4-4E95-A1D9-2FCBFDB6014F}|SmartBin.Infrastructure\\SmartBin.Infrastructure.csproj|c:\\my folder\\projects\\smartbinapi\\smartbin.infrastructure\\mqttclients\\mqttbuffer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCB295B2-5AE4-4E95-A1D9-2FCBFDB6014F}|SmartBin.Infrastructure\\SmartBin.Infrastructure.csproj|solutionrelative:smartbin.infrastructure\\mqttclients\\mqttbuffer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CE8D6A9F-5FBC-4AFF-96C9-ACFF2351BEC1}|SmartBin.Api\\SmartBin.Api.csproj|c:\\my folder\\projects\\smartbinapi\\smartbin.api\\hubs\\scadahost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CE8D6A9F-5FBC-4AFF-96C9-ACFF2351BEC1}|SmartBin.Api\\SmartBin.Api.csproj|solutionrelative:smartbin.api\\hubs\\scadahost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E1DE276-58DB-4965-A7CA-B8CAA8273E8B}|SmartBin.Testing\\SmartBin.Testing.csproj|c:\\my folder\\projects\\smartbinapi\\smartbin.testing\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E1DE276-58DB-4965-A7CA-B8CAA8273E8B}|SmartBin.Testing\\SmartBin.Testing.csproj|solutionrelative:smartbin.testing\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -59,118 +35,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "BinController.cs",
-              "DocumentMoniker": "C:\\My Folder\\Projects\\SmartBinApi\\SmartBin.Api\\Controllers\\BinController.cs",
-              "RelativeDocumentMoniker": "SmartBin.Api\\Controllers\\BinController.cs",
-              "ToolTip": "C:\\My Folder\\Projects\\SmartBinApi\\SmartBin.Api\\Controllers\\BinController.cs",
-              "RelativeToolTip": "SmartBin.Api\\Controllers\\BinController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "MqttBuffer.cs",
+              "DocumentMoniker": "C:\\My Folder\\Projects\\SmartBinApi\\SmartBin.Infrastructure\\MqttClients\\MqttBuffer.cs",
+              "RelativeDocumentMoniker": "SmartBin.Infrastructure\\MqttClients\\MqttBuffer.cs",
+              "ToolTip": "C:\\My Folder\\Projects\\SmartBinApi\\SmartBin.Infrastructure\\MqttClients\\MqttBuffer.cs",
+              "RelativeToolTip": "SmartBin.Infrastructure\\MqttClients\\MqttBuffer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T09:40:26.493Z",
+              "WhenOpened": "2024-11-19T16:23:54.85Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ScadaHost.cs",
+              "DocumentMoniker": "C:\\My Folder\\Projects\\SmartBinApi\\SmartBin.Api\\Hubs\\ScadaHost.cs",
+              "RelativeDocumentMoniker": "SmartBin.Api\\Hubs\\ScadaHost.cs",
+              "ToolTip": "C:\\My Folder\\Projects\\SmartBinApi\\SmartBin.Api\\Hubs\\ScadaHost.cs",
+              "RelativeToolTip": "SmartBin.Api\\Hubs\\ScadaHost.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAEsAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T16:05:40.832Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\My Folder\\Projects\\SmartBinApi\\SmartBin.Host\\Program.cs",
-              "RelativeDocumentMoniker": "SmartBin.Host\\Program.cs",
-              "ToolTip": "C:\\My Folder\\Projects\\SmartBinApi\\SmartBin.Host\\Program.cs",
-              "RelativeToolTip": "SmartBin.Host\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABYAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\My Folder\\Projects\\SmartBinApi\\SmartBin.Testing\\Program.cs",
+              "RelativeDocumentMoniker": "SmartBin.Testing\\Program.cs",
+              "ToolTip": "C:\\My Folder\\Projects\\SmartBinApi\\SmartBin.Testing\\Program.cs",
+              "RelativeToolTip": "SmartBin.Testing\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T09:05:09.326Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AddCollectedHistoryViewModel.cs",
-              "DocumentMoniker": "C:\\My Folder\\Projects\\SmartBinApi\\SmartBin.Infrastructure\\Domain\\Resources\\CollectedHistories\\AddCollectedHistoryViewModel.cs",
-              "RelativeDocumentMoniker": "SmartBin.Infrastructure\\Domain\\Resources\\CollectedHistories\\AddCollectedHistoryViewModel.cs",
-              "ToolTip": "C:\\My Folder\\Projects\\SmartBinApi\\SmartBin.Infrastructure\\Domain\\Resources\\CollectedHistories\\AddCollectedHistoryViewModel.cs",
-              "RelativeToolTip": "SmartBin.Infrastructure\\Domain\\Resources\\CollectedHistories\\AddCollectedHistoryViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T08:55:45.148Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "IBinUnitService.cs",
-              "DocumentMoniker": "C:\\My Folder\\Projects\\SmartBinApi\\SmartBin.Infrastructure\\Services\\BinUnits\\IBinUnitService.cs",
-              "RelativeDocumentMoniker": "SmartBin.Infrastructure\\Services\\BinUnits\\IBinUnitService.cs",
-              "ToolTip": "C:\\My Folder\\Projects\\SmartBinApi\\SmartBin.Infrastructure\\Services\\BinUnits\\IBinUnitService.cs",
-              "RelativeToolTip": "SmartBin.Infrastructure\\Services\\BinUnits\\IBinUnitService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T06:55:12.44Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "BinUnitService.cs",
-              "DocumentMoniker": "C:\\My Folder\\Projects\\SmartBinApi\\SmartBin.Infrastructure\\Services\\BinUnits\\BinUnitService.cs",
-              "RelativeDocumentMoniker": "SmartBin.Infrastructure\\Services\\BinUnits\\BinUnitService.cs",
-              "ToolTip": "C:\\My Folder\\Projects\\SmartBinApi\\SmartBin.Infrastructure\\Services\\BinUnits\\BinUnitService.cs",
-              "RelativeToolTip": "SmartBin.Infrastructure\\Services\\BinUnits\\BinUnitService.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAACIAAABJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T06:55:11.709Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IBinUnitRepository.cs",
-              "DocumentMoniker": "C:\\My Folder\\Projects\\SmartBinApi\\SmartBin.Infrastructure\\Repositories\\BinUnits\\IBinUnitRepository.cs",
-              "RelativeDocumentMoniker": "SmartBin.Infrastructure\\Repositories\\BinUnits\\IBinUnitRepository.cs",
-              "ToolTip": "C:\\My Folder\\Projects\\SmartBinApi\\SmartBin.Infrastructure\\Repositories\\BinUnits\\IBinUnitRepository.cs",
-              "RelativeToolTip": "SmartBin.Infrastructure\\Repositories\\BinUnits\\IBinUnitRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA/AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T06:55:06.17Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "BinUnitRepository.cs",
-              "DocumentMoniker": "C:\\My Folder\\Projects\\SmartBinApi\\SmartBin.Infrastructure\\Repositories\\BinUnits\\BinUnitRepository.cs",
-              "RelativeDocumentMoniker": "SmartBin.Infrastructure\\Repositories\\BinUnits\\BinUnitRepository.cs",
-              "ToolTip": "C:\\My Folder\\Projects\\SmartBinApi\\SmartBin.Infrastructure\\Repositories\\BinUnits\\BinUnitRepository.cs",
-              "RelativeToolTip": "SmartBin.Infrastructure\\Repositories\\BinUnits\\BinUnitRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T06:55:04.785Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "HostWorker.cs",
-              "DocumentMoniker": "C:\\My Folder\\Projects\\SmartBinApi\\SmartBin.Host\\Hosting\\HostWorker.cs",
-              "RelativeDocumentMoniker": "SmartBin.Host\\Hosting\\HostWorker.cs",
-              "ToolTip": "C:\\My Folder\\Projects\\SmartBinApi\\SmartBin.Host\\Hosting\\HostWorker.cs",
-              "RelativeToolTip": "SmartBin.Host\\Hosting\\HostWorker.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAADwv08AAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T06:54:09.253Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ScadaHost.cs",
-              "DocumentMoniker": "C:\\My Folder\\Projects\\SmartBinApi\\SmartBin.Api\\Hubs\\ScadaHost.cs",
-              "RelativeDocumentMoniker": "SmartBin.Api\\Hubs\\ScadaHost.cs",
-              "ToolTip": "C:\\My Folder\\Projects\\SmartBinApi\\SmartBin.Api\\Hubs\\ScadaHost.cs",
-              "RelativeToolTip": "SmartBin.Api\\Hubs\\ScadaHost.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAAAEsAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T06:45:05.524Z",
+              "WhenOpened": "2024-11-19T15:36:01.46Z",
               "EditorCaption": ""
             }
           ]

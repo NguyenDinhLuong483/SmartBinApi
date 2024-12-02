@@ -1,4 +1,6 @@
 ﻿
+using System.Reflection.Metadata.Ecma335;
+
 namespace SmartBin.Infrastructure.MqttClients
 {
     public class MqttBuffer
@@ -9,9 +11,9 @@ namespace SmartBin.Infrastructure.MqttClients
         {
         }
 
-        public void Update(TagChangedNotification tagChangedNotification)
+        public async Task Update(TagChangedNotification tagChangedNotification)
         {
-            var isExist = TagChangedForAdmin.FirstOrDefault(x => x.Name == tagChangedNotification.Name);
+            var isExist = TagChangedForAdmin.FirstOrDefault(x => x.Name == tagChangedNotification.Name && x.BinUnitId == tagChangedNotification.BinUnitId && x.BinId == tagChangedNotification.BinId);
             if (isExist is null)
             {
                 TagChangedForAdmin.Add(tagChangedNotification);
@@ -24,8 +26,10 @@ namespace SmartBin.Infrastructure.MqttClients
             {
                 isExist.Value = tagChangedNotification.Value;
             }
+            await Task.CompletedTask;
         }
         public string GetTagsForUser() => System.Text.Json.JsonSerializer.Serialize(TagChangedForUser);
         public string GetTagsForAdmin() => System.Text.Json.JsonSerializer.Serialize(TagChangedForAdmin);
+
     }
 }

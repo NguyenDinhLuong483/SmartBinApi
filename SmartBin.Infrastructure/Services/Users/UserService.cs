@@ -119,7 +119,7 @@ public UserService(IUserRepository userRepository, IUnitOfWork unitOfWork, IMapp
                 {
                     return "Current password is incorrect";
                 }
-                else if (!string.IsNullOrEmpty(viewModel.CurrentPassword)) 
+                else if (string.IsNullOrEmpty(viewModel.NewPassword)) 
                 {
                     return "The new password cannot be left blank"!;
                 }

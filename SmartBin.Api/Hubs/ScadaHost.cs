@@ -63,16 +63,17 @@ namespace SmartBin.Api.Hubs
             {
                 metric.BinId = binId;
                 metric.BinUnitId = binUnitId;
-                _buffer.Update(metric);
+             
                 var json = JsonConvert.SerializeObject(metric);
-
-                if(metric.Name == "FullLevel")
-                {
-                    await _notificationHub.Clients.Group("Users").SendAsync("ReceiceForUser", json);
-                }
-                await _notificationHub.Clients.Group("BinAdmins").SendAsync("ReceiceForAdmin", json);
-
                 Console.WriteLine(json);
+
+                if (metric.Name == "FullLevel")
+                {
+                    await _notificationHub.Clients.Group("Users").SendAsync("ReceiveForUser", json);
+                }
+                await _notificationHub.Clients.Group("BinAdmins").SendAsync("ReceiveForAdmin", json);
+
+                await _buffer.Update(metric);
             }
         }
     }
